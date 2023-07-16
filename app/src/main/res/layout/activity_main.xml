@@ -1,0 +1,12 @@
+<RelativeLayout
+    android:background="#000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="1000dp"
+        android:layout_height="1900dp"
+        android:background="@drawable/carga" />
+</RelativeLayout>
