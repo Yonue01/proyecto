@@ -186,24 +186,51 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textViewLugar"
+                android:id="@+id/rol"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textViewDia"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="35dp"
-                android:text="rol"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:text="Rool:"
                 android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/edicodigo"
-                android:layout_width="match_parent"
+            <RadioGroup
+                android:id="@+id/radioGroupUserType"
+                android:layout_toEndOf="@+id/textViewDia"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/textViewLugar"
+                android:orientation="horizontal"
+                android:layout_marginStart="1dp"
                 android:layout_below="@+id/edifoto"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:textSize="20sp" />
+                android:layout_marginTop="16dp"
+                android:theme="@style/RadioButtonStyle">
+
+                <RadioButton
+                    android:id="@+id/radioButtonArbitro"
+                    style="@style/RadioButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Árbitro" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonJugador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Administrador"
+
+                    style="@style/RadioButtonStyle" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonOrganizado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="mesero "
+
+                    style="@style/RadioButtonStyle" />
+
+            </RadioGroup>
 
             <Button
                 android:id="@+id/btnagregar"
@@ -217,6 +244,7 @@
                 android:textSize="15sp"
                 android:textColor="@android:color/white"
                 android:backgroundTint="@android:color/black" />
+
 
             <Button
                 android:id="@+id/btnbuscar"
@@ -271,7 +299,7 @@
                 android:textColor="@android:color/white"
                 android:backgroundTint="@android:color/black"
                 android:text="Escaner"
-                android:layout_below="@+id/edicodigo"
+                android:layout_below="@+id/radioGroupUserType"
                 android:textSize="15sp" />
 
         </RelativeLayout>
