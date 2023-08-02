@@ -1,307 +1,182 @@
-<RelativeLayout
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="#0E6655">
 
-    <ScrollView
+
+    <TextView
+        android:id="@+id/tituloregistrar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Registrar empleado"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
-        <RelativeLayout
+    <LinearLayout
+        android:id="@+id/linearSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edpasswordr"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_equipo1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:hint="Empleado"
+            android:textColorHint="@color/white"
+            app:startIconTint="#FFFFFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_equipo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:enabled="false"
+                android:inputType="text"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/spinnerempleado"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/id"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tituloregistrar"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColorHint="@color/white"
+        app:startIconTint="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/idd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:hint="id"
+            android:inputType="text"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/eduserr"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColorHint="@color/white"
+        app:startIconTint="@color/white">
 
-            <TextView
-                android:id="@+id/textViewId"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="25dp"
-                android:text="ID:"
-                android:textSize="20sp" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edusernamer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Usuario"
+            android:inputType="text"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/editTextId"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/textViewId"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:hint="Ingrese el ID "
-                android:textSize="20sp" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edpasswordr"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eduserr"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:textColorHint="@color/white"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@android:color/white"
+        app:startIconTint="@color/white">
 
-            <TextView
-                android:id="@+id/textViewnombre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textViewId"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="25dp"
-                android:text="Nombre:"
-                android:textSize="20sp" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edcontralr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/edinombre"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/textViewnombre"
-                android:layout_below="@+id/editTextId"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:textSize="20sp" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegistrar01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearSpinner"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#000"
+        android:text="REGISTRAR"
+        android:textColor="@color/white" />
 
-            <TextView
-                android:id="@+id/textViewEquipo2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textViewnombre"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="30dp"
-                android:text="Edad:"
-                android:textSize="20sp" />
+    <Button
+        android:id="@+id/btnbuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/btnRegistrar01"
+        android:layout_below="@+id/linearSpinner"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="250dp"
+        android:text="Buscar"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/black" />
 
-            <EditText
-                android:id="@+id/txtedad"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/textViewEquipo2"
-                android:layout_below="@+id/edinombre"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:textSize="20sp" />
+    <Button
+        android:id="@+id/btnactualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_below="@+id/btnRegistrar01"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Actualizar"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/black" />
 
-            <TextView
-                android:id="@+id/textViewCapitan1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textViewEquipo2"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="30dp"
-                android:text="Dirección :"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/etdirecion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/textViewCapitan1"
-                android:layout_below="@+id/txtedad"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textViewCapitan2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textViewCapitan1"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="30dp"
-                android:text="Teléfono:"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/editel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/textViewCapitan2"
-                android:layout_below="@+id/etdirecion"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:textSize="20sp" />
-
-
-
-
-
-
-            <TextView
-                android:id="@+id/textViewHora"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/contraseña"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="30dp"
-                android:text="Teléfono:"
-                android:textSize="20sp" />
-
-
-
-            <TextView
-                android:id="@+id/contraseña"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textViewCapitan2"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="30dp"
-                android:text="Contraseña:"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/txtcontraseña"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/contraseña"
-                android:layout_below="@+id/editel"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-
-                android:textSize="20sp" />
-
-
-
-
-
-            <EditText
-                android:id="@+id/editele"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/textViewHora"
-                android:layout_below="@+id/txtcontraseña"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:hint="Teléfono en caso de emergencia"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textViewDia"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textViewHora"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="30dp"
-                android:text="Fotografía:"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/edifoto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/textViewDia"
-                android:layout_below="@+id/editele"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/rol"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textViewDia"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="40dp"
-                android:text="Rool:"
-                android:textSize="20sp" />
-
-            <RadioGroup
-                android:id="@+id/radioGroupUserType"
-                android:layout_toEndOf="@+id/textViewDia"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginStart="1dp"
-                android:layout_below="@+id/edifoto"
-                android:layout_marginTop="16dp"
-                android:theme="@style/RadioButtonStyle">
-
-                <RadioButton
-                    android:id="@+id/radioButtonArbitro"
-                    style="@style/RadioButtonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:text="Árbitro" />
-
-                <RadioButton
-                    android:id="@+id/radioButtonJugador"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Administrador"
-
-                    style="@style/RadioButtonStyle" />
-
-                <RadioButton
-                    android:id="@+id/radioButtonOrganizado"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="mesero "
-
-                    style="@style/RadioButtonStyle" />
-
-            </RadioGroup>
-
-            <Button
-                android:id="@+id/btnagregar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="100dp"
-                android:layout_below="@+id/btnscener"
-                android:text="Agregar"
-                android:textSize="15sp"
-                android:textColor="@android:color/white"
-                android:backgroundTint="@android:color/black" />
-
-
-            <Button
-                android:id="@+id/btnbuscar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/btnagregar"
-                android:layout_below="@+id/btnscener"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="250dp"
-                android:text="Buscar"
-                android:textSize="15sp"
-                android:textColor="@android:color/white"
-                android:backgroundTint="@android:color/black" />
-
-            <Button
-                android:id="@+id/btneliminar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="70dp"
-                android:layout_marginEnd="250dp"
-                android:layout_below="@+id/btnbuscar"
-                android:layout_toEndOf="@+id/btnactualizar"
-                android:text="Eliminar"
-                android:textSize="15sp"
-                android:textColor="@android:color/white"
-                android:backgroundTint="@android:color/black" />
-
-            <Button
-                android:id="@+id/btnactualizar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_below="@+id/btnagregar"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="15dp"
-                android:text="Actualizar"
-                android:textSize="15sp"
-                android:textColor="@android:color/white"
-                android:backgroundTint="@android:color/black" />
-
-            <Button
-                android:id="@+id/btnscener"
-                android:layout_width="355dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="66dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="64dp"
-                android:textColor="@android:color/white"
-                android:backgroundTint="@android:color/black"
-                android:text="Escaner"
-                android:layout_below="@+id/radioGroupUserType"
-                android:textSize="15sp" />
-
-        </RelativeLayout>
-    </ScrollView>
+    <Button
+        android:id="@+id/btneliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="250dp"
+        android:layout_below="@+id/btnbuscar"
+        android:layout_toEndOf="@+id/btnactualizar"
+        android:text="Eliminar"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/black" />
 </RelativeLayout>

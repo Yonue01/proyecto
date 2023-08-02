@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fondo3">
 
     <EditText
         android:id="@+id/usuario"
@@ -21,10 +22,8 @@
         android:id="@+id/contraseñaa"
         android:layout_width="208dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="104dp"
+        android:layout_below="@+id/usuario"
         android:layout_marginBottom="270dp"
         android:ems="10"
         android:textColor="	#FFFF00"

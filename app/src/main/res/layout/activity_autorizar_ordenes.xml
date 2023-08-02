@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0E6655"
+    tools:context=".Autorizar_Ordenes">
+
+
+        <TextView
+            android:id="@+id/textviewMESA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Mesa"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Pedido:"
+            android:id="@+id/pedido"
+            android:layout_below="@+id/textviewMESA"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:id="@+id/textviewPEDIDO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/pedido"
+            android:layout_below="@+id/textviewMESA"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:layout_margin="10dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/total"
+            android:layout_margin="10dp"
+            android:layout_marginStart="15dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Total:"
+            android:textColor="#FFFFFF"
+            android:layout_below="@+id/pedido"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:id="@+id/textviewTOTAL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+           android:layout_toEndOf="@+id/total"
+            android:layout_below="@+id/textviewPEDIDO"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/btnaUTORIZARORDEN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000"
+            android:text="Autorizar"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginTop="500dp"
+            android:layout_below="@+id/textviewTOTAL"/>
+
+</RelativeLayout>

@@ -8,5 +8,5 @@
     <TextView
         android:layout_width="1000dp"
         android:layout_height="1900dp"
-        android:background="@drawable/carga" />
+        android:background="@drawable/fondo2" />
 </RelativeLayout>

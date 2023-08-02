@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -10,15 +12,31 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".CrearUsuario"
+            android:name=".Ordenes_Realizadas"
+            android:exported="false" />
+        <activity
+            android:name=".opciones_administrador"
+            android:exported="false" />
+        <activity
+            android:name=".Autorizar_Ordenes"
+            android:exported="false" />
+        <activity
+            android:name=".Notificacion_Mecero"
+            android:exported="false" />
+        <activity
+            android:name=".modificar_usuarios"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".logym"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".CrearUsuario"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
